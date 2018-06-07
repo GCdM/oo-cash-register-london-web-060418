@@ -19,5 +19,6 @@ class CashRegister
       "After the discount, the total comes to $#{@total.to_i}."
     else
       "There is no discount to be applied."
+    end
   end
 end
