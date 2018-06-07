@@ -8,6 +8,7 @@ class CashRegister
     @total = 0.0
     @discount = emp_discount
     @items = []
+    @last_transaction = []
   end
   
   def add_item(item, price, quantity=1)
@@ -15,6 +16,7 @@ class CashRegister
     quantity.times do
       @items << item
     end
+    @last_transaction = [item, price, quantity]
   end
   
   def apply_discount
@@ -28,5 +30,9 @@ class CashRegister
   
   def items
     @items
+  end
+  
+  def void_last_transaction
+    
   end
 end
